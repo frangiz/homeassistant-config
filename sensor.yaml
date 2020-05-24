@@ -1,8 +1,35 @@
   - platform: mqtt
-    state_topic: "sensors/temperature"
-    name: 'Ground floor temp'
+    state_topic: "sensor/ecfabc27d6ea"
+    name: 'Office temp'
     unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
-    unique_id: "publisher-1"
-    expire_after: 5
+    unique_id: "ecfabc27d6ea-temp"
+    expire_after: 3600
     icon: mdi:thermometer
+
+  - platform: mqtt
+    state_topic: "sensor/ecfabc27d6ea"
+    name: 'Office humidity'
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+    unique_id: "ecfabc27d6ea-humidity"
+    expire_after: 3600
+    icon: mdi:water-percent
+
+  - platform: mqtt
+    state_topic: "sensor/500291c88b6e"
+    name: 'Bedroom temp'
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    unique_id: "500291c88b6e-temp"
+    expire_after: 3600
+    icon: mdi:thermometer
+
+  - platform: mqtt
+    state_topic: "sensor/500291c88b6e"
+    name: 'Bedroom humidity'
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+    unique_id: "500291c88b6e-humidity"
+    expire_after: 3600
+    icon: mdi:water-percent
