@@ -1,0 +1,8 @@
+  - platform: mqtt
+    state_topic: "sensors/temperature"
+    name: 'Ground floor temp'
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    unique_id: "publisher-1"
+    expire_after: 5
+    icon: mdi:thermometer

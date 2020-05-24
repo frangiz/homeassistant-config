@@ -1,0 +1,4 @@
+  climate:
+    name: Climate
+    entities:
+      - sensor.ground_floor_temp
