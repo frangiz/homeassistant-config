@@ -4,4 +4,4 @@
       - sensor.office_temp
       - sensor.office_humidity
       - sensor.bedroom_temp
-      - sensor.office_humidity
+      - sensor.bedroom_humidity
