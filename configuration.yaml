@@ -15,6 +15,11 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
 
+no_ip:
+  domain: !secret noip_domain
+  username: !secret noip_username
+  password: !secret noip_password
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

@@ -33,3 +33,10 @@
     unique_id: "500291c88b6e-humidity"
     expire_after: 3600
     icon: mdi:water-percent
+
+  - platform: min_max
+    name: mean_temp
+    type: mean
+    entity_ids:
+      - sensor.office_temp
+      - sensor.bedroom_temp
