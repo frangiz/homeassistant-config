@@ -1,7 +1,13 @@
-  climate:
-    name: Climate
+  climate_second_floor:
+    name: Climate second floor
     entities:
       - sensor.office_temp
       - sensor.office_humidity
       - sensor.bedroom_temp
       - sensor.bedroom_humidity
+
+  climate_first_floor:
+    name: Climate first floor
+    entities:
+      - sensor.livingroom_temp
+      - sensor.livingroom_humidity
