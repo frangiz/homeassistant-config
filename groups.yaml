@@ -11,3 +11,5 @@
     entities:
       - sensor.livingroom_temp
       - sensor.livingroom_humidity
+      - sensor.hallway_temp
+      - sensor.hallway_humidity

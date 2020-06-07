@@ -20,6 +20,11 @@ no_ip:
   username: !secret noip_username
   password: !secret noip_password
 
+switch:
+  - platform: sonoff_lan_mode_r3
+    name: water switch
+    device_id: 1000905709
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
