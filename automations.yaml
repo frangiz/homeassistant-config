@@ -1,1 +1,18 @@
-[]
+- id: '1593371636159'
+  alias: Lights on in the evening
+  description: ''
+  trigger:
+  - event: sunset
+    offset: -01:00:00
+    platform: sun
+  condition:
+  - after: '13:00'
+    before: '22:00'
+    condition: time
+  action:
+  - data:
+      message: Sun is going to sleep.
+    service: notify.notify
+  - data: {}
+    entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
+    service: switch.turn_on

@@ -11,7 +11,7 @@ tts:
   - platform: google_translate
 
 mqtt:
-  broker: homeassistant.local
+  broker: localhost
   username: !secret mqtt_username
   password: !secret mqtt_password
 
