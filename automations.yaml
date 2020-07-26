@@ -3,7 +3,7 @@
   description: ''
   trigger:
   - event: sunset
-    offset: -01:00:00
+    offset: -00:30:00
     platform: sun
   condition:
   - after: '13:00'
@@ -11,8 +11,22 @@
     condition: time
   action:
   - data:
-      message: Sun is going to sleep.
-    service: notify.notify
+      message: Sun is going to sleep in 30 min.
+    service: notify.mobile_app_hd1903
   - data: {}
     entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
     service: switch.turn_on
+- id: '1595777315473'
+  alias: Lights off when it is bedtime
+  description: ''
+  trigger:
+  - at: '23:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      message: You should go to sleep now.
+    service: notify.mobile_app_hd1903
+  - data: {}
+    entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
+    service: switch.turn_off
