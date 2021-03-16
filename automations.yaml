@@ -16,11 +16,15 @@
   - data: {}
     entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
     service: switch.turn_on
+  - data: {}
+    entity_id: light.front_door
+    service: light.turn_on
+  mode: single
 - id: '1595777315473'
   alias: Lights off when it is bedtime
   description: ''
   trigger:
-  - at: '23:00'
+  - at: '23:30'
     platform: time
   condition: []
   action:
@@ -30,24 +34,29 @@
   - data: {}
     entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
     service: switch.turn_off
+  - data: {}
+    entity_id: light.front_door
+    service: light.turn_off
+  mode: single
 - id: '1596559718243'
   alias: Notify temp sensors out of battery
   description: ''
   trigger:
   - entity_id: sensor.office_temp
     platform: state
-    to: unknown
+    to: unavailable
   - entity_id: sensor.bedroom_temp
     platform: state
-    to: unknown
+    to: unavailable
   - entity_id: sensor.livingroom_temp
     platform: state
-    to: unknown
+    to: unavailable
   - entity_id: sensor.hallway_temp
     platform: state
-    to: unknown
+    to: unavailable
   condition: []
   action:
-  - data_template:
+  - service: notify.mobile_app_hd1903
+    data:
       message: No temp value from {{ trigger.entity_id }}.
-    service: notify.mobile_app_hd1903
+  mode: single
