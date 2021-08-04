@@ -20,8 +20,6 @@ no_ip:
   username: !secret noip_username
   password: !secret noip_password
 
-sonoff:
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
