@@ -13,3 +13,11 @@
       - sensor.livingroom_humidity
       - sensor.hallway_temp
       - sensor.hallway_humidity
+
+  lights_livingroom:
+    name: Lights livingroom
+    entities:
+      - switch.living_room_outlet_front
+      - switch.tradfri_outlet_2
+      - switch.tradfri_outlet_4
+      - switch.outlet_7

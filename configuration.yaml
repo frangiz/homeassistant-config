@@ -10,15 +10,7 @@ default_config:
 tts:
   - platform: google_translate
 
-mqtt:
-  broker: localhost
-  username: !secret mqtt_username
-  password: !secret mqtt_password
-
-no_ip:
-  domain: !secret noip_domain
-  username: !secret noip_username
-  password: !secret noip_password
+mqtt: !include mqtt.yaml
 
 group: !include groups.yaml
 automation: !include automations.yaml

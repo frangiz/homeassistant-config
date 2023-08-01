@@ -3,3 +3,9 @@ secrets.yaml
 *.log
 .storage/
 **/__pycache__/
+*.log*
+*.db*
+
+# ???
+image/
+tts/

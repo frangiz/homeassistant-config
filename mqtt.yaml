@@ -1,0 +1,64 @@
+  sensor:
+    - state_topic: "sensor/2610922"
+      name: 'Office temp'
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      unique_id: "2610922-temp"
+      expire_after: 3600
+      icon: mdi:thermometer
+
+    - state_topic: "sensor/2610922"
+      name: 'Office humidity'
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      unique_id: "2610922-humidity"
+      expire_after: 3600
+      icon: mdi:water-percent
+  
+    - state_topic: "sensor/13142894"
+      name: 'Bedroom temp'
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      unique_id: "13142894-temp"
+      expire_after: 3600
+      icon: mdi:thermometer
+  
+    - state_topic: "sensor/13142894"
+      name: 'Bedroom humidity'
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      unique_id: "13142894-humidity"
+      expire_after: 3600
+      icon: mdi:water-percent
+  
+    - state_topic: "sensor/13179970"
+      name: 'Livingroom temp'
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      unique_id: "13179970-temp"
+      expire_after: 3600
+      icon: mdi:thermometer
+  
+    - state_topic: "sensor/13179970"
+      name: 'Livingroom humidity'
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      unique_id: "13179970-humidity"
+      expire_after: 3600
+      icon: mdi:water-percent
+  
+    - state_topic: "sensor/13143391"
+      name: 'hallway temp'
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      unique_id: "13143391-temp"
+      expire_after: 3600
+      icon: mdi:thermometer
+  
+    - state_topic: "sensor/13143391"
+      name: 'hallway humidity'
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      unique_id: "13143391-humidity"
+      expire_after: 3600
+      icon: mdi:water-percent

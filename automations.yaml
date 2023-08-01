@@ -6,13 +6,10 @@
     offset: -00:30:00
     platform: sun
   condition:
-  - after: '13:00'
-    before: '22:00'
+  - after: '13:00:00'
+    before: '22:00:00'
     condition: time
   action:
-  - data:
-      message: Sun is going to sleep in 30 min.
-    service: notify.mobile_app_hd1903
   - data: {}
     entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
     service: switch.turn_on
@@ -24,39 +21,14 @@
   alias: Lights off when it is bedtime
   description: ''
   trigger:
-  - at: '23:30'
+  - at: '23:30:00'
     platform: time
   condition: []
   action:
-  - data:
-      message: You should go to sleep now.
-    service: notify.mobile_app_hd1903
   - data: {}
     entity_id: switch.tradfri_outlet,switch.tradfri_outlet_2
     service: switch.turn_off
   - data: {}
     entity_id: light.front_door
     service: light.turn_off
-  mode: single
-- id: '1596559718243'
-  alias: Notify temp sensors out of battery
-  description: ''
-  trigger:
-  - entity_id: sensor.office_temp
-    platform: state
-    to: unavailable
-  - entity_id: sensor.bedroom_temp
-    platform: state
-    to: unavailable
-  - entity_id: sensor.livingroom_temp
-    platform: state
-    to: unavailable
-  - entity_id: sensor.hallway_temp
-    platform: state
-    to: unavailable
-  condition: []
-  action:
-  - service: notify.mobile_app_hd1903
-    data:
-      message: No temp value from {{ trigger.entity_id }}.
   mode: single
